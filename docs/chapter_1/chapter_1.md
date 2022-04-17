@@ -27,3 +27,29 @@ follow a systematic and conventional filing structure. Errors within the code ca
 bundling operation; this book will instruct you on how to overcome these problems.
 
 Now, let's explore the general concepts around Webpack 5.
+
+## General concepts behind Webpack 5
+Here, we will begin to understand the key concepts and the purpose of Webpack, rather
+than expect you to have any prior understanding of it. Bundling is carried out locally on a
+desktop using Node.js or npm and the command-line interface (CLI), usually Command
+Prompt.
+
+Webpack is a build tool that puts all of your assets into a dependency graph. This includes
+JavaScript files, images, fonts, and Cascading Style Sheets (CSS). It will take Sassy
+CSS (SCSS) and TypeScript files and place them into CSS and JavaScript files, respectively.
+Webpack will only be able to do this when the code is compatible with the latter format.
+
+When programming in JavaScript and other languages, the source code will often use a
+statement such as require(), which points one file to another. Webpack will detect this
+statement and determine the file that is needed as a dependency. This will decide how the
+files are processed in your final JavaScript bundle. This will also include replacing a URL
+path to a content delivery network (CDN)—which is, essentially, a network of proxy
+servers—with a local file.
+
+The following diagram is a representation of the general purpose of Webpack, which is to
+take a set of files or dependencies and output the content in an optimized form:
+
+![](./1.png)
+
+Now, let's take a closer look at some of the terminology, which you may be unfamiliar with
+but can be considered common parlance when using Webpack.
