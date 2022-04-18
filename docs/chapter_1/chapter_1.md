@@ -279,3 +279,43 @@ version of your choice, such as 5.00:
 npm install --save-dev webpack
 npm install --save-dev webpack@<version>
 ```
+4.  The next command is npm install, which will install Webpack 5 in the
+directory and save the project in a development environment. It is important to
+note that there is a difference between the development and production
+environments (or modes):
+```
+npm install --save-dev webpack-cli
+```
+The following lines are a code snippet from the package.json file. We need
+these in the input files to generate a webpack.config.js file, which holds the
+configuration information for your Webpack bundle.
+
+5. We must take care to ensure that the package.json file is coded as follows:
+```
+"scripts": {
+"build": "webpack --config webpack.config.js"
+}
+```
+When using Webpack 5, you can access its binary version by running npx
+webpack in the CLI.
+We should also decide which type of installation we need; any re-installation will
+overwrite the previous one, so don't worry if you have already followed the
+preceding steps.
+
+6.  Let's do that installation now, if applicable.
+There are two types of installation:
+    - Global: A global installation will lockdown your installation to a
+specific version of Webpack.
+The following npm installation will make Webpack available
+globally:
+```
+npm install --global webpack
+```
+ - Local: A local installation will allow you to run Webpack in the
+project directory. This needs to be done via the npm script:
+```
+npm install webpack --save-dev
+```
+You will need to carry out all of the preceding steps every time you begin a new project on
+a new local machine. Once you have completed the installation, it is time to revert your
+attention to building a project.
