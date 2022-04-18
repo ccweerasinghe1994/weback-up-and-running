@@ -4,6 +4,7 @@
   - [General concepts behind Webpack 5](#general-concepts-behind-webpack-5)
   - [Terminology](#terminology)
     - [Note](#note)
+  - [Note](#note-1)
 ## The fundamentals of Webpack 5
 
 Essentially, Webpack is a module bundler for JavaScript applications. Webpack takes a
@@ -124,3 +125,13 @@ can be altered to some degree after it is bundled, which is very useful, for
 example, in a case where you are altering a database's connection
 configurations.
 
+When working with Webpack 5, these phrases may present themselves and it is important
+that you don't get too confused by them.
+
+## Note
+Most other terminology will be explained as we encounter it, or it is so
+common that we assume you understand these terms if you are familiar
+with JavaScript.
+
+That summarizes the bulk of the terminology you will come across when using Webpack.
+Now, we will explore how the software works.
