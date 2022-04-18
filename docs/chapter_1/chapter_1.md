@@ -304,7 +304,7 @@ preceding steps.
 
 6.  Let's do that installation now, if applicable.
 There are two types of installation:
-    - Global: A global installation will lockdown your installation to a
+  - Global: A global installation will lockdown your installation to a
 specific version of Webpack.
 The following npm installation will make Webpack available
 globally:
