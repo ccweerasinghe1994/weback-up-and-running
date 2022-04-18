@@ -72,3 +72,59 @@ ensuring that processors are kept to an optimal level and removing any coding
 structure that does not conform to a standard. This also encourages the developer
 to adopt conventions a lot more diligently. Should there be any insecure
 programming, these locations are more easily identified, isolated, and corrected.
+
+- **SASS**: A version of CSS that has enhanced features. Webpack handles this code
+as it does CSS; however, it is a phrase that may come up and leave you stumped,
+so it is worth knowing about.
+
+- **SCSS**: This is simply the name for the syntax version used to give SASS extra
+functionality. It is useful to know that Webpack is capable of transpiling both
+syntaxes.
+
+- **Transpiling**: This is the process where Webpack 5 takes a set of input source
+code and changes it into a more optimized output distribution code. This is done
+by removing unused or duplicated code. Transpiling is used to convert one set of
+files into a simpler set. For instance, SCSS often contains script that can be easily
+stored inside a CSS file. You might also transpile SCSS to CSS, or TypeScript to
+JavaScript.
+- **TypeScript**: For the uninitiated, TypeScript is a type of code that is similar to
+JavaScript in many ways. Browsers, for instance, most commonly run JavaScript,
+so it may be more appropriate to use JavaScript, where possible. Webpack 5 will
+transpile TypeScript into JavaScript whenever the former allows.
+- **CDN**: A CDN is a network of proxy servers that provides high availability and
+high performance. Some examples are Google APIs, such as Google Fonts, and
+other similar tools that all JavaScript developers are, no doubt, familiar with.
+- **Dependency graphs**: In Webpack 5, a dependency graph is a directed graph
+representing the dependency of several assets to each other. Webpack 5 maps a
+list of assets and dependencies itself and records how they depend on each other
+in an application. It uses this to derive an appropriate output file structure.
+
+Though JavaScript is the entry point, Webpack appreciates that your other asset
+types—such as HTML, CSS, and SVG—each have dependencies of their own, which should
+be considered as part of the build process.
+
+Webpack is comprised of input and output. The output can be made of one or more files.
+As well as bundling modules, Webpack can carry out a lot of functions on your files. The
+input refers to the original files when they are in their original structure, before bundling.
+The output refers to the resulting bundled files in their new and optimized filing structure.
+Inputs, therefore, are comprised of the source files and outputs can be comprised of
+development files or production files.
+
+There is often a conflation between the terms input and output and source code and
+development code.
+
+
+<div style="display:flex;justify-content:center;align-items:center;">
+<div >
+<img src="https://img.icons8.com/clouds/500/000000/info.png"/>
+</div>    
+<div style="padding:20px" >Source code refers to the original application before it is bundled.
+Development code refers to the application after it is placed in the
+Node.js environment and bundled in developmental mode. A more
+"tightly packed" version of the bundle is produced in production mode,
+but this version is difficult to work on. Therefore, the development code
+can be altered to some degree after it is bundled, which is very useful, for
+example, in a case where you are altering a database's connection
+configurations.</div>    
+</div>
+
