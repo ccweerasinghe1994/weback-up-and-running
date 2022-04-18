@@ -11,6 +11,11 @@
     - [Modes](#modes)
   - [Setting up Webpack](#setting-up-webpack)
   - [Creating a sample project](#creating-a-sample-project)
+      - [Note](#note-2)
+    - [Bundling your first project](#bundling-your-first-project)
+      - [Note](#note-3)
+  - [Summery](#summery)
+  - [Questions](#questions)
 
 ## The fundamentals of Webpack 5
 
@@ -400,7 +405,203 @@ frontend.
   </body>
 </html>
 ```
-Note the preceding ```html <script src="https://unpkg.com/lodash@4.16.6">``` tag. This
-refers to the use of the ```lodash``` library. The ```index.js``` file (not the ```index.html``` file)
+
+Note the preceding ` <script src="https://unpkg.com/lodash@4.16.6">` tag. This
+refers to the use of the `lodash` library. The `index.js` file (not the `index.html` file)
 requires this library to be called. Webpack will take whatever modules it needs from the
 library and use them to build a dependency graph for the bundle.
+
+#### Note
+
+Lodash is a JavaScript library that provides functional programming
+tasks. It was released under the MIT license and essentially makes things
+easier when working with numbers, arrays, strings, and objects.
+
+Something to be aware of is that if it is not made clear that your code depends on
+an external library, the application will not function properly. For
+example, dependencies could be missing or included in the wrong
+order. Conversely, the browser will download unnecessary code if a dependency
+is included but not used.
+
+We can manage these scripts by using Webpack 5.
+
+4.  You will also need to adjust your package.json file to mark your package as
+    private, as well as removing the main entry point. This is to prevent accidentally
+    publishing your code:
+
+```json
+{
+  "name": "webpack5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "dev": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ccweerasinghe1994"
+}
+```
+
+You can see how to make these alterations from the bold text in the preceding code. Note
+that our entry point will be set as `index.js`. This is the first file that Webpack will read
+when beginning a bundle compilation (see the previous definition of a dependency graph).
+
+If you want to learn more about the `package.json` file, go to `https:/​/​docs.​npmjs.​com/ getting-​started/`, which gives you information about `npm`.
+
+We have now finished with the source code for the first demonstration application bundle.
+This constitutes the input or source files that we will now run through Webpack to produce
+our first bundled application.
+
+### Bundling your first project
+
+Web packing simply means bundling the project. It is the essence of Webpack and starting
+with this very simple introduction is an excellent way to begin learning about the
+application.
+
+Firstly, we need to separate the source code from our distribution code by altering our
+directory structure slightly. This source code is used to write and edit and the distribution
+code is the minimized and optimized bundle that is the result of our build process.
+
+We will now go through each step for building our first project in detail:
+
+1.  We will begin by structuring the project and the directories. First, note the /src
+    and /dist terms; they refer to the source code and distribution code,
+    respectively:
+
+```
+webpack5-demo
+|- package.json
+|- /dist
+|- index.html
+|- index.js
+|- /src
+|- index.js
+```
+
+2. To bundle the lodash dependency with index.js, we need to install the library
+   locally:
+
+```
+npm install --save lodash
+```
+
+When installing a package that will be bundled to your production bundle, you
+should use the following command:
+
+```
+npm install --save
+```
+
+If you're installing a package for development purposes (for example, a linter,
+testing libraries, and so on), you should use the following command:
+
+```
+npm install --save-dev
+```
+
+3. Now, let's import lodash into our script using src/main.js:
+
+```js
+import_ from 'lodash';
+function component() {
+let element = document.createElement('div');
+// Lodash, currently included via a script, is required for this
+// line to work
+element.innerHTML = _.join(['Hello', 'Webpack'], ' ');
+return element;
+}
+document.body.appendChild(component());
+```
+
+4. Next, update your dist/index.html file. We will remove the inclusion of the
+   lodash library.
+
+This is done because we will be installing the library locally for bundling and no
+longer need to make a remote call to the library:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting Started</title>
+    <script src="https://unpkg.com/lodash@4.16.6"></script>
+    //If you see the above line, please remove it.
+  </head>
+  <body>
+    <script src="main.js"></script>
+  </body>
+</html>
+```
+5. Next, we will use the command line to run ```npx webpack```. The ```npx``` command
+ships with Node 8.2/npm 5.0.0 or higher and runs the Webpack binary
+```(./node_modules/.bin/webpack)```. This will take our script at ```src/index.js```
+as the entry point and will generate ```dist/main.js``` as the output:
+
+```
+npx webpack
+...
+Built at: 14/03/2019 11:50:07
+Asset Size Chunks Chunk Names
+main.js 70.4 KiB 0 [emitted] main
+...
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to
+'production' for this value. Set 'mode' option to 'development' or
+'production' to enable defaults for each environment.
+You can also set it to 'none' to disable any default behavior.
+Learn more: https://webpack.js.org/concepts/mode/
+```
+If there are no errors, the build can be considered successful.
+
+#### Note
+Note that a warning is not considered an error. The warning is simply
+shown because no mode has yet been set.
+
+I wouldn't be concerned about this as Webpack will default to production mode.
+We will handle the setting of modes later in this guide.
+
+6. You should see the following text when you open index.html in your browser:
+
+```Testing Webpack5```
+
+Huzzah—we have completed our first application bundle and I bet you're very proud of
+yourself! This was a fundamental step to begin with; we will move on to more complex
+elements of Webpack in later chapters and begin applying them to existing projects that
+need bundling.
+
+## Summery
+To summarize, Webpack 5 is an incredibly versatile bundler that uses almost every
+conceivable method to optimize the size of applications and improve the overall
+performance. It is very worthwhile getting to grips with it and this guide will show you
+everything you need to know to do so.
+
+You should now understand the basic concepts behind Webpack, as well as the
+fundamental terminology. You should also now know how to install the prerequisites, such
+as Node.js, and set up and deploy—as well as make—your first bundle using the command
+line.
+
+In the next chapter, we will elaborate on modules and code splitting, as well as some of the
+more salient and interesting aspects of Webpack 5 that are key to understanding Webpack.
+
+## Questions
+The following are a series of questions related to this chapter that you should try to answer
+to aid your learning. The answers can be found under the Assessments section in the back
+matter of this book:
+1. What is Webpack?
+2. What is a bundle in Webpack?
+3. What is the latest version of Webpack, according to this guide?
+4. Which environment does Webpack work in?
+5. What is a dependency graph?
+6. When bundling, what entry is missing from the following command:
+npm --save lodash
+7. What is the name of the package manager that we use with Webpack 5?
+8. How would you remove the lodash library using the command line?
+9. What is the difference between source code and distribution code when working
+with Webpack 5?
+10. When setting up your project, why might you adjust the package.json file?
