@@ -338,7 +338,8 @@ webpack5-demo
 |- /src
 |- index.js
 ```
-    The project tree shows us the files that we will work on.
+The project tree shows us the files that we will work on.
+
 2. Let's now take a closer look at the index files as they will be key to our frontend,
 starting with src/index.js:
 ```js
