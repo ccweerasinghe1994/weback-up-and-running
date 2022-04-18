@@ -236,8 +236,8 @@ There are many to choose from, but for the sake of this tutorial, we will use Co
 Prompt.
 
 Let's break this down step by step so that you can follow along:
-- Install the npm package manager, which you will use with Wepback 5.
-- Open the CLI (in this tutorial, we will be using Command Prompt) and type the
+1. Install the npm package manager, which you will use with Wepback 5.
+2.  Open the CLI (in this tutorial, we will be using Command Prompt) and type the
 following:
 
   - ```npm init -y```
@@ -256,4 +256,26 @@ following:
   "license": "ISC"
 }
 ```
-  - 
+```
+mkdir webpack4 && cd webpack5
+npm init -y
+npm install webpack webpack-cli --save-dev
+```
+  Let's break down the code block. The preceding command will first create a new
+  directory on your local machine, called webpack5. It will then identify the current
+  directory (cd) as webpack5. This means any further commands made through the
+  CLI will be made with respect to that directory. The next command is to initialize
+  npm. A full list of these basic commands and what they mean can be found in the
+  Further reading section at the end of this chapter. This section makes for some
+  interesting reading and I'm sure you will learn something new. Then, we locally
+  install Webpack and install webpack-cli—this is the tool used to run Webpack
+  on the command line.
+
+  3.  Next, install the latest release, or a specific version of Webpack, and run the
+following command. However, on the second line, replace <version> with the
+version of your choice, such as 5.00:
+
+```
+npm install --save-dev webpack
+npm install --save-dev webpack@<version>
+```
