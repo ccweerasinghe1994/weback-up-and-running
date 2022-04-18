@@ -1,4 +1,5 @@
 # WEBPACK UP AND RUNNING
+
 - [WEBPACK UP AND RUNNING](#webpack-up-and-running)
   - [The fundamentals of Webpack 5](#the-fundamentals-of-webpack-5)
     - [General concepts behind Webpack 5](#general-concepts-behind-webpack-5)
@@ -10,6 +11,7 @@
     - [Modes](#modes)
   - [Setting up Webpack](#setting-up-webpack)
   - [Creating a sample project](#creating-a-sample-project)
+
 ## The fundamentals of Webpack 5
 
 Essentially, Webpack is a module bundler for JavaScript applications. Webpack takes a
@@ -39,6 +41,7 @@ bundling operation; this book will instruct you on how to overcome these problem
 Now, let's explore the general concepts around Webpack 5.
 
 ### General concepts behind Webpack 5
+
 Here, we will begin to understand the key concepts and the purpose of Webpack, rather
 than expect you to have any prior understanding of it. Bundling is carried out locally on a
 desktop using Node.js or npm and the command-line interface (CLI), usually Command
@@ -65,46 +68,48 @@ Now, let's take a closer look at some of the terminology, which you may be unfam
 but can be considered common parlance when using Webpack.
 
 ### Terminology
+
 This section will cover the terminology used in Webpack 5. This will include native terms,
 as well as some more unusual acronyms:
+
 - **Assets**: This is a term frequently used in Webpack to prevent conflations of
-concepts. It refers to image files, or even data or script files, collated by the
-software when producing a bundled application.
+  concepts. It refers to image files, or even data or script files, collated by the
+  software when producing a bundled application.
 - **Bundle**: This refers to the application that is output once Webpack has compiled
-an application. This is an optimized version of the original or source
-application—the reasons for this will be discussed in detail in later chapters. The
-bundler will combine these files into one file, which makes unpicking and
-hacking very difficult. It also improves browser performance. It does this by
-ensuring that processors are kept to an optimal level and removing any coding
-structure that does not conform to a standard. This also encourages the developer
-to adopt conventions a lot more diligently. Should there be any insecure
-programming, these locations are more easily identified, isolated, and corrected.
+  an application. This is an optimized version of the original or source
+  application—the reasons for this will be discussed in detail in later chapters. The
+  bundler will combine these files into one file, which makes unpicking and
+  hacking very difficult. It also improves browser performance. It does this by
+  ensuring that processors are kept to an optimal level and removing any coding
+  structure that does not conform to a standard. This also encourages the developer
+  to adopt conventions a lot more diligently. Should there be any insecure
+  programming, these locations are more easily identified, isolated, and corrected.
 
 - **SASS**: A version of CSS that has enhanced features. Webpack handles this code
-as it does CSS; however, it is a phrase that may come up and leave you stumped,
-so it is worth knowing about.
+  as it does CSS; however, it is a phrase that may come up and leave you stumped,
+  so it is worth knowing about.
 
 - **SCSS**: This is simply the name for the syntax version used to give SASS extra
-functionality. It is useful to know that Webpack is capable of transpiling both
-syntaxes.
+  functionality. It is useful to know that Webpack is capable of transpiling both
+  syntaxes.
 
 - **Transpiling**: This is the process where Webpack 5 takes a set of input source
-code and changes it into a more optimized output distribution code. This is done
-by removing unused or duplicated code. Transpiling is used to convert one set of
-files into a simpler set. For instance, SCSS often contains script that can be easily
-stored inside a CSS file. You might also transpile SCSS to CSS, or TypeScript to
-JavaScript.
+  code and changes it into a more optimized output distribution code. This is done
+  by removing unused or duplicated code. Transpiling is used to convert one set of
+  files into a simpler set. For instance, SCSS often contains script that can be easily
+  stored inside a CSS file. You might also transpile SCSS to CSS, or TypeScript to
+  JavaScript.
 - **TypeScript**: For the uninitiated, TypeScript is a type of code that is similar to
-JavaScript in many ways. Browsers, for instance, most commonly run JavaScript,
-so it may be more appropriate to use JavaScript, where possible. Webpack 5 will
-transpile TypeScript into JavaScript whenever the former allows.
+  JavaScript in many ways. Browsers, for instance, most commonly run JavaScript,
+  so it may be more appropriate to use JavaScript, where possible. Webpack 5 will
+  transpile TypeScript into JavaScript whenever the former allows.
 - **CDN**: A CDN is a network of proxy servers that provides high availability and
-high performance. Some examples are Google APIs, such as Google Fonts, and
-other similar tools that all JavaScript developers are, no doubt, familiar with.
+  high performance. Some examples are Google APIs, such as Google Fonts, and
+  other similar tools that all JavaScript developers are, no doubt, familiar with.
 - **Dependency graphs**: In Webpack 5, a dependency graph is a directed graph
-representing the dependency of several assets to each other. Webpack 5 maps a
-list of assets and dependencies itself and records how they depend on each other
-in an application. It uses this to derive an appropriate output file structure.
+  representing the dependency of several assets to each other. Webpack 5 maps a
+  list of assets and dependencies itself and records how they depend on each other
+  in an application. It uses this to derive an appropriate output file structure.
 
 Though JavaScript is the entry point, Webpack appreciates that your other asset
 types—such as HTML, CSS, and SVG—each have dependencies of their own, which should
@@ -121,6 +126,7 @@ There is often a conflation between the terms input and output and source code a
 development code.
 
 #### Note
+
 Source code refers to the original application before it is bundled.
 Development code refers to the application after it is placed in the
 Node.js environment and bundled in developmental mode. A more
@@ -134,6 +140,7 @@ When working with Webpack 5, these phrases may present themselves and it is impo
 that you don't get too confused by them.
 
 #### Note
+
 Most other terminology will be explained as we encounter it, or it is so
 common that we assume you understand these terms if you are familiar
 with JavaScript.
@@ -142,6 +149,7 @@ That summarizes the bulk of the terminology you will come across when using Webp
 Now, we will explore how the software works.
 
 ### How Webpack works
+
 Webpack works by generating a dependency graph of assets in a set of source files, which it
 transpiles an optimized set of distribution files from. These source and distribution files
 contain source code and distribution code, respectively. This distributed code forms the
@@ -158,7 +166,9 @@ asset.
 We have covered a good overview of how the software works; experienced users of
 previous Webpack versions may consider this overview rudimentary, so let's have a look at
 what is new in this current version.
+
 ### What's new in Webpack 5?
+
 The popular Webpack module bundler has undergone a massive update for the release of
 version 5. Webpack 5 offers massive performance improvements, more dynamic scalability,
 and basic backward compatibility.
@@ -176,21 +186,21 @@ with modules and assets in remotely stored separate bundles.
 The advantages of Webpack 5 are summarized as follows:
 
 - Webpack 5 offers control over HTTP requests, which improves speed and
-performance, and also alleviates security concerns.
+  performance, and also alleviates security concerns.
 - Webpack 5 has some advantages over rival bundlers such as Browserify and
-systemjs—namely, speed. The build time directly depends on the configuration
-but it's faster than its nearest rivals.
+  systemjs—namely, speed. The build time directly depends on the configuration
+  but it's faster than its nearest rivals.
 - Little or no configuration is required to use Webpack 5, but you always have it as
-an option.
+  an option.
 - It can be more complicated to use than alternatives, but this is mainly due to its
-versatility and scope and it is well worth overcoming.
+  versatility and scope and it is well worth overcoming.
 - Webpack 5 has optimization plugins that remove unused code fantastically well.
-It also has many related features, such as tree shaking, which we will discuss in
-more detail later in this book.
+  It also has many related features, such as tree shaking, which we will discuss in
+  more detail later in this book.
 - It is more flexible than Browserify, allowing the user to select more entry points
-and use different types of assets. It's also better, when it comes to speed and
-flexibility, for bundling large web applications and for single-page web
-applications.
+  and use different types of assets. It's also better, when it comes to speed and
+  flexibility, for bundling large web applications and for single-page web
+  applications.
 
 Webpack is now considered an incredibly important tool for application development and
 web development, transforming the structure and optimizing the loading time for all of
@@ -199,6 +209,7 @@ Webpack practically. To do that, the first thing we will look at that may be new
 you have, perhaps, only worked with Vanilla JavaScript up to now—is modes.
 
 ### Modes
+
 Once you have understood the general concepts, the first thing you need to learn about
 when running a build is modes. Modes are central to how Webpack works and compiles
 projects, so it is best to cover this brief but important topic before we go any further.
@@ -210,7 +221,7 @@ topic to get your head around.
 Webpack ships with two configuration files, which are as follows:
 
 - Development config: This uses webpack-dev-server (hot reloading),
-debugging enabled, and so on.
+  debugging enabled, and so on.
 - Production config: This will spit out an optimized, minimized (uglify JS), sourcemapped bundle that is used in production environments.
 
 Since the release of version 5, Webpack takes care of the mode features by default by
@@ -218,7 +229,9 @@ simply adding a mode argument to the command. Webpack can't use package.json alo
 to find the mode to determine the correct build path.
 
 Now that we have a grasp of the fundamentals, it's time to progress to the practical setup.
+
 ## Setting up Webpack
+
 This book follows the development of a sample project step by step, and I am sure you will
 find this a simple way to learn how to use Webpack 5.
 
@@ -237,12 +250,14 @@ There are many to choose from, but for the sake of this tutorial, we will use Co
 Prompt.
 
 Let's break this down step by step so that you can follow along:
-1. Install the npm package manager, which you will use with Wepback 5.
-2.  Open the CLI (in this tutorial, we will be using Command Prompt) and type the
-following:
 
-  - ```npm init -y```
-  - output
+1. Install the npm package manager, which you will use with Wepback 5.
+2. Open the CLI (in this tutorial, we will be using Command Prompt) and type the
+   following:
+
+- `npm init -y`
+- output
+
 ```
 {
   "name": "webpack5",
@@ -257,46 +272,53 @@ following:
   "license": "ISC"
 }
 ```
+
 ```
 mkdir webpack4 && cd webpack5
 npm init -y
 npm install webpack webpack-cli --save-dev
 ```
-  Let's break down the code block. The preceding command will first create a new
-  directory on your local machine, called webpack5. It will then identify the current
-  directory (cd) as webpack5. This means any further commands made through the
-  CLI will be made with respect to that directory. The next command is to initialize
-  npm. A full list of these basic commands and what they mean can be found in the
-  Further reading section at the end of this chapter. This section makes for some
-  interesting reading and I'm sure you will learn something new. Then, we locally
-  install Webpack and install webpack-cli—this is the tool used to run Webpack
-  on the command line.
 
-  3.  Next, install the latest release, or a specific version of Webpack, and run the
-following command. However, on the second line, replace <version> with the
-version of your choice, such as 5.00:
+Let's break down the code block. The preceding command will first create a new
+directory on your local machine, called webpack5. It will then identify the current
+directory (cd) as webpack5. This means any further commands made through the
+CLI will be made with respect to that directory. The next command is to initialize
+npm. A full list of these basic commands and what they mean can be found in the
+Further reading section at the end of this chapter. This section makes for some
+interesting reading and I'm sure you will learn something new. Then, we locally
+install Webpack and install webpack-cli—this is the tool used to run Webpack
+on the command line.
+
+3.  Next, install the latest release, or a specific version of Webpack, and run the
+    following command. However, on the second line, replace <version> with the
+    version of your choice, such as 5.00:
 
 ```
 npm install --save-dev webpack
 npm install --save-dev webpack@<version>
 ```
+
 4.  The next command is npm install, which will install Webpack 5 in the
-directory and save the project in a development environment. It is important to
-note that there is a difference between the development and production
-environments (or modes):
+    directory and save the project in a development environment. It is important to
+    note that there is a difference between the development and production
+    environments (or modes):
+
 ```
 npm install --save-dev webpack-cli
 ```
+
 The following lines are a code snippet from the package.json file. We need
 these in the input files to generate a webpack.config.js file, which holds the
 configuration information for your Webpack bundle.
 
 5. We must take care to ensure that the package.json file is coded as follows:
+
 ```
 "scripts": {
 "build": "webpack --config webpack.config.js"
 }
 ```
+
 When using Webpack 5, you can access its binary version by running npx
 webpack in the CLI.
 We should also decide which type of installation we need; any re-installation will
@@ -304,19 +326,24 @@ overwrite the previous one, so don't worry if you have already followed the
 preceding steps.
 
 6.  Let's do that installation now, if applicable.
-There are two types of installation:
-  - Global: A global installation will lockdown your installation to a
-specific version of Webpack.
-The following npm installation will make Webpack available
-globally:
+    There are two types of installation:
+
+- Global: A global installation will lockdown your installation to a
+  specific version of Webpack.
+  The following npm installation will make Webpack available
+  globally:
+
 ```
 npm install --global webpack
 ```
- - Local: A local installation will allow you to run Webpack in the
-project directory. This needs to be done via the npm script:
+
+- Local: A local installation will allow you to run Webpack in the
+  project directory. This needs to be done via the npm script:
+
 ```
 npm install webpack --save-dev
 ```
+
 You will need to carry out all of the preceding steps every time you begin a new project on
 a new local machine. Once you have completed the installation, it is time to revert your
 attention to building a project.
@@ -331,6 +358,7 @@ and naming conventions typically used in Webpack. You should follow this format 
 ensure your project aligns with this tutorial, as follows:
 
 1.  Begin by setting up the project tree:
+
 ```
 webpack5-demo
 |- package.json
@@ -338,17 +366,41 @@ webpack5-demo
 |- /src
 |- index.js
 ```
+
 The project tree shows us the files that we will work on.
 
 2. Let's now take a closer look at the index files as they will be key to our frontend,
-starting with src/index.js:
+   starting with src/index.js:
+
 ```js
 function component() {
-let element = document.createElement('div');
-// Lodash, currently included via a script, is required for this
-// line to work
-element.innerHTML = _.join(['Testing', 'webpack'], ' ');
-return element;
+  let element = document.createElement("div");
+  // Lodash, currently included via a script, is required for this
+  // line to work
+  element.innerHTML = _.join(["Testing", "webpack"], " ");
+  return element;
 }
 document.body.appendChild(component());
 ```
+
+`index.js` contains our JS. The `index.html` file that follows is our user's
+frontend.
+
+3. It will also need setting up, so let's open and edit index.html:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webpack - Test</title>
+    <script src="https://unpkg.com/lodash@4.16.6"></script>
+  </head>
+  <body>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
+```
+Note the preceding ```html <script src="https://unpkg.com/lodash@4.16.6">``` tag. This
+refers to the use of the ```lodash``` library. The ```index.js``` file (not the ```index.html``` file)
+requires this library to be called. Webpack will take whatever modules it needs from the
+library and use them to build a dependency graph for the bundle.
