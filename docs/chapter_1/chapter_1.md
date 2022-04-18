@@ -8,6 +8,7 @@
     - [How Webpack works](#how-webpack-works)
     - [What's new in Webpack 5?](#whats-new-in-webpack-5)
     - [Modes](#modes)
+  - [Setting up Webpack](#setting-up-webpack)
 ## The fundamentals of Webpack 5
 
 Essentially, Webpack is a module bundler for JavaScript applications. Webpack takes a
@@ -216,3 +217,25 @@ simply adding a mode argument to the command. Webpack can't use package.json alo
 to find the mode to determine the correct build path.
 
 Now that we have a grasp of the fundamentals, it's time to progress to the practical setup.
+## Setting up Webpack
+This book follows the development of a sample project step by step, and I am sure you will
+find this a simple way to learn how to use Webpack 5.
+
+Webpack 5 packages all its dependencies within the application you wish to bundle on a
+local machine. Theoretically, this can be done remotely, but to save any confusion for firsttime users, I will emphasize the use of a local machine.
+
+Installing packages locally is recommended for most projects. It makes things easier when
+upgrade or break changes are introduced.
+
+We will begin with the npm installation. npm is the package manager that you will use with
+Webpack 5. Once this is installed on your local machine, you will be able to use the npm
+command using a CLI, such as Command Prompt.
+
+Once you have installed npm, you can move on to the next step, which is to open your CLI.
+There are many to choose from, but for the sake of this tutorial, we will use Command
+Prompt.
+
+Let's break this down step by step so that you can follow along:
+- Install the npm package manager, which you will use with Wepback 5.
+- Open the CLI (in this tutorial, we will be using Command Prompt) and type the
+following:
