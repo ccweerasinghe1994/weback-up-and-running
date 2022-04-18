@@ -118,7 +118,7 @@ development code.
 <div >
 <img src="https://img.icons8.com/clouds/500/000000/info.png"/>
 </div>    
-<div style="padding:20px" >Source code refers to the original application before it is bundled.
+<div style="padding:20px;color:red" >Source code refers to the original application before it is bundled.
 Development code refers to the application after it is placed in the
 Node.js environment and bundled in developmental mode. A more
 "tightly packed" version of the bundle is produced in production mode,
