@@ -1,5 +1,8 @@
 # WEBPACK UP AND RUNNING
-
+- [WEBPACK UP AND RUNNING](#webpack-up-and-running)
+  - [The fundamentals of Webpack 5](#the-fundamentals-of-webpack-5)
+  - [General concepts behind Webpack 5](#general-concepts-behind-webpack-5)
+  - [Terminology](#terminology)
 ## The fundamentals of Webpack 5
 
 Essentially, Webpack is a module bundler for JavaScript applications. Webpack takes a
@@ -53,3 +56,19 @@ take a set of files or dependencies and output the content in an optimized form:
 
 Now, let's take a closer look at some of the terminology, which you may be unfamiliar with
 but can be considered common parlance when using Webpack.
+
+## Terminology
+This section will cover the terminology used in Webpack 5. This will include native terms,
+as well as some more unusual acronyms:
+- **Assets**: This is a term frequently used in Webpack to prevent conflations of
+concepts. It refers to image files, or even data or script files, collated by the
+software when producing a bundled application.
+- **Bundle**: This refers to the application that is output once Webpack has compiled
+an application. This is an optimized version of the original or source
+application—the reasons for this will be discussed in detail in later chapters. The
+bundler will combine these files into one file, which makes unpicking and
+hacking very difficult. It also improves browser performance. It does this by
+ensuring that processors are kept to an optimal level and removing any coding
+structure that does not conform to a standard. This also encourages the developer
+to adopt conventions a lot more diligently. Should there be any insecure
+programming, these locations are more easily identified, isolated, and corrected.
