@@ -3,6 +3,7 @@
   - [The fundamentals of Webpack 5](#the-fundamentals-of-webpack-5)
   - [General concepts behind Webpack 5](#general-concepts-behind-webpack-5)
   - [Terminology](#terminology)
+    - [Note](#note)
 ## The fundamentals of Webpack 5
 
 Essentially, Webpack is a module bundler for JavaScript applications. Webpack takes a
@@ -113,18 +114,13 @@ development files or production files.
 There is often a conflation between the terms input and output and source code and
 development code.
 
-
-<div style="display:flex;justify-content:center;align-items:center;">
-<div >
-<img src="https://img.icons8.com/clouds/500/000000/info.png"/>
-</div>    
-<div style="padding:20px;color:red" >Source code refers to the original application before it is bundled.
+### Note
+Source code refers to the original application before it is bundled.
 Development code refers to the application after it is placed in the
 Node.js environment and bundled in developmental mode. A more
 "tightly packed" version of the bundle is produced in production mode,
 but this version is difficult to work on. Therefore, the development code
 can be altered to some degree after it is bundled, which is very useful, for
 example, in a case where you are altering a database's connection
-configurations.</div>    
-</div>
+configurations.
 
