@@ -1,10 +1,13 @@
 # WEBPACK UP AND RUNNING
 - [WEBPACK UP AND RUNNING](#webpack-up-and-running)
   - [The fundamentals of Webpack 5](#the-fundamentals-of-webpack-5)
-  - [General concepts behind Webpack 5](#general-concepts-behind-webpack-5)
-  - [Terminology](#terminology)
-    - [Note](#note)
-  - [Note](#note-1)
+    - [General concepts behind Webpack 5](#general-concepts-behind-webpack-5)
+    - [Terminology](#terminology)
+      - [Note](#note)
+      - [Note](#note-1)
+    - [How Webpack works](#how-webpack-works)
+    - [What's new in Webpack 5?](#whats-new-in-webpack-5)
+    - [Modes](#modes)
 ## The fundamentals of Webpack 5
 
 Essentially, Webpack is a module bundler for JavaScript applications. Webpack takes a
@@ -33,7 +36,7 @@ bundling operation; this book will instruct you on how to overcome these problem
 
 Now, let's explore the general concepts around Webpack 5.
 
-## General concepts behind Webpack 5
+### General concepts behind Webpack 5
 Here, we will begin to understand the key concepts and the purpose of Webpack, rather
 than expect you to have any prior understanding of it. Bundling is carried out locally on a
 desktop using Node.js or npm and the command-line interface (CLI), usually Command
@@ -59,7 +62,7 @@ take a set of files or dependencies and output the content in an optimized form:
 Now, let's take a closer look at some of the terminology, which you may be unfamiliar with
 but can be considered common parlance when using Webpack.
 
-## Terminology
+### Terminology
 This section will cover the terminology used in Webpack 5. This will include native terms,
 as well as some more unusual acronyms:
 - **Assets**: This is a term frequently used in Webpack to prevent conflations of
@@ -115,7 +118,7 @@ development files or production files.
 There is often a conflation between the terms input and output and source code and
 development code.
 
-### Note
+#### Note
 Source code refers to the original application before it is bundled.
 Development code refers to the application after it is placed in the
 Node.js environment and bundled in developmental mode. A more
@@ -128,10 +131,88 @@ configurations.
 When working with Webpack 5, these phrases may present themselves and it is important
 that you don't get too confused by them.
 
-## Note
+#### Note
 Most other terminology will be explained as we encounter it, or it is so
 common that we assume you understand these terms if you are familiar
 with JavaScript.
 
 That summarizes the bulk of the terminology you will come across when using Webpack.
 Now, we will explore how the software works.
+
+### How Webpack works
+Webpack works by generating a dependency graph of assets in a set of source files, which it
+transpiles an optimized set of distribution files from. These source and distribution files
+contain source code and distribution code, respectively. This distributed code forms the
+output. Distribution is simply another name for the output or bundle.
+
+Webpack begins by finding an entry point in the source files and from there, it builds a
+dependency graph. The selection of an entry point is optional in Webpack 5 and the choice
+of selection will alter the nature of the build process, either in terms of speed or output
+optimization.
+
+Webpack 5 is capable of transforming, bundling, or packaging just about any resource or
+asset.
+
+We have covered a good overview of how the software works; experienced users of
+previous Webpack versions may consider this overview rudimentary, so let's have a look at
+what is new in this current version.
+### What's new in Webpack 5?
+The popular Webpack module bundler has undergone a massive update for the release of
+version 5. Webpack 5 offers massive performance improvements, more dynamic scalability,
+and basic backward compatibility.
+
+Webpack 5 takes over from version 4, where backward compatibility wasn't always
+possible with many of the various loaders available, which were often more compatible
+with version 2, which meant that a developer would often encounter deprecation warnings
+in the command line if version 2 wasn't used. Webpack 5 has now addressed this issue.
+
+Another big selling point of version 5 is federated modules. We will discuss this in more
+detail in a later Chapter 6, Production, Integration, and Federated Modules. However, to sum it
+up, federated modules are essentially a way for a bundled application to utilize and interact
+with modules and assets in remotely stored separate bundles.
+
+The advantages of Webpack 5 are summarized as follows:
+
+- Webpack 5 offers control over HTTP requests, which improves speed and
+performance, and also alleviates security concerns.
+- Webpack 5 has some advantages over rival bundlers such as Browserify and
+systemjs—namely, speed. The build time directly depends on the configuration
+but it's faster than its nearest rivals.
+- Little or no configuration is required to use Webpack 5, but you always have it as
+an option.
+- It can be more complicated to use than alternatives, but this is mainly due to its
+versatility and scope and it is well worth overcoming.
+- Webpack 5 has optimization plugins that remove unused code fantastically well.
+It also has many related features, such as tree shaking, which we will discuss in
+more detail later in this book.
+- It is more flexible than Browserify, allowing the user to select more entry points
+and use different types of assets. It's also better, when it comes to speed and
+flexibility, for bundling large web applications and for single-page web
+applications.
+
+Webpack is now considered an incredibly important tool for application development and
+web development, transforming the structure and optimizing the loading time for all of
+your web assets, such as HTML, JS, CSS, and images. Let's now get to grips with using
+Webpack practically. To do that, the first thing we will look at that may be new to you—if
+you have, perhaps, only worked with Vanilla JavaScript up to now—is modes.
+
+### Modes
+Once you have understood the general concepts, the first thing you need to learn about
+when running a build is modes. Modes are central to how Webpack works and compiles
+projects, so it is best to cover this brief but important topic before we go any further.
+
+Modes use the CLI, a process that we will cover in more detail later. If you are used to
+using Vanilla JavaScript, this may be new to you. However, rest assured it is not a complex
+topic to get your head around.
+
+Webpack ships with two configuration files, which are as follows:
+
+- Development config: This uses webpack-dev-server (hot reloading),
+debugging enabled, and so on.
+- Production config: This will spit out an optimized, minimized (uglify JS), sourcemapped bundle that is used in production environments.
+
+Since the release of version 5, Webpack takes care of the mode features by default by
+simply adding a mode argument to the command. Webpack can't use package.json alone
+to find the mode to determine the correct build path.
+
+Now that we have a grasp of the fundamentals, it's time to progress to the practical setup.
