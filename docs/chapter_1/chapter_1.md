@@ -9,6 +9,7 @@
     - [What's new in Webpack 5?](#whats-new-in-webpack-5)
     - [Modes](#modes)
   - [Setting up Webpack](#setting-up-webpack)
+  - [Creating a sample project](#creating-a-sample-project)
 ## The fundamentals of Webpack 5
 
 Essentially, Webpack is a module bundler for JavaScript applications. Webpack takes a
@@ -319,3 +320,34 @@ npm install webpack --save-dev
 You will need to carry out all of the preceding steps every time you begin a new project on
 a new local machine. Once you have completed the installation, it is time to revert your
 attention to building a project.
+
+## Creating a sample project
+
+Now, we'll create an experimental project with the following directory structure, files, and
+their contents.
+
+The following code block refers to a folder on your local machine. It illustrates the format
+and naming conventions typically used in Webpack. You should follow this format to
+ensure your project aligns with this tutorial, as follows:
+
+1.  Begin by setting up the project tree:
+```
+webpack5-demo
+|- package.json
+|- index.html
+|- /src
+|- index.js
+```
+    The project tree shows us the files that we will work on.
+2. Let's now take a closer look at the index files as they will be key to our frontend,
+starting with src/index.js:
+```js
+function component() {
+let element = document.createElement('div');
+// Lodash, currently included via a script, is required for this
+// line to work
+element.innerHTML = _.join(['Testing', 'webpack'], ' ');
+return element;
+}
+document.body.appendChild(component());
+```
