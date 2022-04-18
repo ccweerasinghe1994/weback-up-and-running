@@ -263,7 +263,7 @@ Let's break this down step by step so that you can follow along:
 - `npm init -y`
 - output
 
-```
+```json
 {
   "name": "webpack5",
   "version": "1.0.0",
@@ -318,7 +318,7 @@ configuration information for your Webpack bundle.
 
 5. We must take care to ensure that the package.json file is coded as follows:
 
-```
+```json
 "scripts": {
 "build": "webpack --config webpack.config.js"
 }
