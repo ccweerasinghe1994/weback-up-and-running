@@ -239,3 +239,21 @@ Let's break this down step by step so that you can follow along:
 - Install the npm package manager, which you will use with Wepback 5.
 - Open the CLI (in this tutorial, we will be using Command Prompt) and type the
 following:
+
+  - ```npm init -y```
+  - output
+```
+{
+  "name": "webpack5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
+  - 
