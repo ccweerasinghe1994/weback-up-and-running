@@ -277,8 +277,8 @@ Let's break this down step by step so that you can follow along:
   "license": "ISC"
 }
 ```
-
-```
+<!-- this is for command prompt -->
+```bash
 mkdir webpack4 && cd webpack5
 npm init -y
 npm install webpack webpack-cli --save-dev
