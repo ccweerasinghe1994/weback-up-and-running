@@ -107,8 +107,7 @@ as well as some more unusual acronyms:
 - `CDN`: A `CDN` is a network of proxy servers that provides high availability and
   high performance. Some examples are `Google APIs`, such as Google `Fonts`, and
   other similar tools that all `JavaScript` developers are, no doubt, familiar with.
-- `Dependency` graphs: In `Webpack` 5, a `dependency` graph`is a directed graph representing the`dependency`of several assets to each other.`Webpack`5 maps a list of assets and`dependencies` itself and records how they depend on each other
-  in an application. It uses this to `derive` an `appropriate` output file `structure`.
+- `Dependency` graphs: In `Webpack` 5, a `dependency` graph`is a directed graph representing the`dependency`of several assets to each other.`Webpack`5 maps a list of assets and`dependencies`itself and records how they depend on each other in an application. It uses this to`derive`an`appropriate`output file`structure`.
 
 Though `JavaScript` is the entry point, `Webpack` appreciates that your other asset
 types—such as `HTML`, `CSS`, and `SVG—each` have `dependencies` of their own, which should
@@ -132,8 +131,7 @@ Development code refers to the application after it is placed in the
 `"tightly packed"` version of the bundle is produced in `production mode`,
 but this version is `difficult` to work on. Therefore, the development code
 can be `altered` to some degree after it is bundled, which is very useful, for
-example, in a case where you are altering a `database's connection
-configurations`.
+example, in a case where you are altering a `database's connection configurations`.
 
 When working with `Webpack` 5, these phrases may present themselves and it is important
 that you don't get too confused by them.
@@ -149,10 +147,7 @@ Now, we will explore how the software works.
 
 ### 1.1.3 How `Webpack` works
 
-`Webpack` works by generating a `dependency` graph` of `assets` in a set of `source files`, which it
-`transpiles` an `optimized` set of `distribution` files from. These `source` and `distribution` files
-contain `source code` and `distribution code`, respectively. This distributed code forms the
-output. Distribution is simply another name for the `output` or `bundle`.
+`Webpack` works by generating a `dependency` graph`of`assets`in a set of`source files`, which it `transpiles`an`optimized`set of`distribution`files from. These`source`and`distribution`files contain`source code`and`distribution code`, respectively. This distributed code forms the output. Distribution is simply another name for the `output`or`bundle`.
 
 `Webpack` begins by finding an `entry point` in the `source files` and from there, it builds a
 `dependency graph`. The selection of an `entry point` is optional in `Webpack` 5 and the choice
@@ -197,13 +192,10 @@ The advantages of `Webpack` 5 are summarized as follows:
   It also has many related features, such as `tree shaking`, which we will discuss in
   more detail later in this book.
 - It is more `flexible than Browserify`, allowing the user to select more `entry points`
-  and use `different types of assets`. It's also better, when it comes to `speed and
-  flexibility`, for bundling `large web applications` and for `single-page web
-  applications`.
+  and use `different types of assets`. It's also better, when it comes to `speed and flexibility`, for bundling `large web applications` and for `single-page web applications`.
 
 `Webpack` is now considered an incredibly `important` tool for application development and
-`web development`, `transforming the structure` and `optimizing the loading time for all of
-your web assets`, such as `HTML`, `JS`, `CSS`, and `images`. Let's now get to grips with using
+`web development`, `transforming the structure` and `optimizing the loading time for all of your web assets`, such as `HTML`, `JS`, `CSS`, and `images`. Let's now get to grips with using
 `Webpack` practically. To do that, the first thing we will look at that may be new to you—if
 you have, perhaps, only worked with Vanilla `JavaScript` up to now—is modes.
 
@@ -227,7 +219,7 @@ Since the release of version 5, `Webpack` takes care of the `mode` features by `
 simply adding a mode argument to the command. `Webpack` can't use `package.json` alone
 to find the mode to determine the `correct build path`.
 
-Now that we have a grasp of the fundamentals, it's time to progress to the    `practical setup`.
+Now that we have a grasp of the fundamentals, it's time to progress to the `practical setup`.
 
 ## 1.2 Setting up `Webpack`
 
@@ -241,8 +233,7 @@ Installing packages `locally` is recommended for most projects. It makes things 
 `upgrade` or `break changes` are introduced.
 
 We will begin with the `npm installation`. npm is the `package manager` that you will use with
-`Webpack 5`. Once this is installed on your local machine, you will be able to use the `npm
-command using a CLI`, such as Command Prompt.
+`Webpack 5`. Once this is installed on your local machine, you will be able to use the `npm command using a CLI`, such as Command Prompt.
 
 Once you have installed npm, you can move on to the next step, which is to open your CLI.
 There are many to choose from, but for the sake of this tutorial, we will use Command
@@ -448,7 +439,8 @@ You can see how to make these alterations from the bold text in the preceding co
 that our entry point will be set as `index.js`. This is the first file that `Webpack` will read
 when beginning a bundle compilation (see the previous definition of a ``dependency` graph`).
 
-If you want to learn more about the `package.json` file, go to [https:/​/​docs.​npmjs.​com/ getting-​started/]("https:/​/​docs.​npmjs.​com/ getting-​started/"), which gives you information about `npm`.
+If you want to learn more about the `package.json` file, go to 
+[https:/​/​docs.​npmjs.​com/ getting-​started/]('https:/​/​docs.​npmjs.​com/ getting-​started/'), which gives you information about `npm`.
 
 We have now finished with the source code for the first demonstration application bundle.
 This constitutes the input or source files that we will now run through `Webpack` to produce
