@@ -149,18 +149,18 @@ Now, we will explore how the software works.
 
 ### 1.1.3 How `Webpack` works
 
-`Webpack` works by generating a ``dependency` graph` of assets in a set of source files, which it
-transpiles an optimized set of distribution files from. These source and distribution files
-contain source code and distribution code, respectively. This distributed code forms the
-output. Distribution is simply another name for the output or bundle.
+`Webpack` works by generating a `dependency` graph` of `assets` in a set of `source files`, which it
+`transpiles` an `optimized` set of `distribution` files from. These `source` and `distribution` files
+contain `source code` and `distribution code`, respectively. This distributed code forms the
+output. Distribution is simply another name for the `output` or `bundle`.
 
-`Webpack` begins by finding an entry point in the source files and from there, it builds a
-``dependency` graph`. The selection of an entry point is optional in `Webpack` 5 and the choice
-of selection will alter the nature of the build process, either in terms of speed or output
-optimization.
+`Webpack` begins by finding an `entry point` in the `source files` and from there, it builds a
+`dependency graph`. The selection of an `entry point` is optional in `Webpack` 5 and the choice
+of selection will alter the nature of the `build process`, either in terms of `speed` or `output`
+`optimization`.
 
-`Webpack` 5 is capable of transforming, bundling, or packaging just about any resource or
-asset.
+`Webpack` 5 is capable of `transforming`, `bundling`, or `packaging` just about any resource or
+`asset`.
 
 We have covered a good overview of how the software works; experienced users of
 previous `Webpack` versions may consider this overview rudimentary, so let's have a look at
@@ -169,37 +169,37 @@ what is new in this current version.
 ### 1.1.4 What's new in `Webpack` 5?
 
 The popular `Webpack` module bundler has undergone a massive update for the release of
-version 5. `Webpack` 5 offers massive performance improvements, more dynamic scalability,
-and basic backward compatibility.
+version 5. `Webpack` 5 offers massive `performance improvements`, more `dynamic scalability`,
+and `basic backward compatibility`.
 
 `Webpack` 5 takes over from version 4, where backward compatibility wasn't always
-possible with many of the various loaders available, which were often more compatible
-with version 2, which meant that a developer would often encounter deprecation warnings
+possible with `many` of the various `loaders` available, which were often more compatible
+with version 2, which meant that a developer would often encounter `deprecation` warnings
 in the command line if version 2 wasn't used. `Webpack` 5 has now addressed this issue.
 
-Another big selling point of version 5 is federated modules. We will discuss this in more
+Another big selling point of version 5 is `federated` modules. We will discuss this in more
 detail in a later Chapter 6, Production, Integration, and Federated Modules. However, to sum it
 up, federated modules are essentially a way for a bundled application to utilize and interact
-with modules and assets in remotely stored separate bundles.
+with modules and assets in `remotely stored separate bundles`.
 
 The advantages of `Webpack` 5 are summarized as follows:
 
-- `Webpack` 5 offers control over HTTP requests, which improves speed and
-  performance, and also alleviates security concerns.
-- `Webpack` 5 has some advantages over rival bundlers such as Browserify and
-  systemjs—namely, speed. The build time directly depends on the configuration
+- `Webpack` 5 offers `control` over `HTTP requests`, which improves `speed` and
+  `performance`, and also alleviates `security concerns`.
+- `Webpack` 5 has some advantages over rival bundlers such as `Browserify` and
+  `systemjs`—namely, `speed`. The `build time` directly depends on the `configuration`
   but it's faster than its nearest rivals.
-- Little or no configuration is required to use `Webpack` 5, but you always have it as
+- Little or no `configuration` is required to use `Webpack` 5, but you always have it as
   an option.
-- It can be more complicated to use than alternatives, but this is mainly due to its
-  versatility and scope and it is well worth overcoming.
-- `Webpack` 5 has optimization plugins that remove unused code fantastically well.
-  It also has many related features, such as tree shaking, which we will discuss in
+- It can be more `complicated` to use than `alternatives`, but this is mainly due to its
+  `versatility` and `scope` and it is well worth overcoming.
+- `Webpack` 5 has `optimization plugins` that remove `unused code` fantastically well.
+  It also has many related features, such as `tree shaking`, which we will discuss in
   more detail later in this book.
-- It is more flexible than Browserify, allowing the user to select more entry points
-  and use different types of assets. It's also better, when it comes to speed and
-  flexibility, for bundling large web applications and for single-page web
-  applications.
+- It is more `flexible than Browserify`, allowing the user to select more `entry points`
+  and use `different types of assets`. It's also better, when it comes to `speed and
+  flexibility`, for bundling `large web applications` and for `single-page web
+  applications`.
 
 `Webpack` is now considered an incredibly important tool for application development and
 web development, transforming the structure and optimizing the loading time for all of
