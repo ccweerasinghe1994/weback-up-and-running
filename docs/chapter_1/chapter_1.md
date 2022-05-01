@@ -72,11 +72,11 @@ but can be considered common parlance when using `Webpack`.
 This section will cover the terminology used in `Webpack` 5. This will include native terms,
 as well as some more unusual acronyms:
 
-- `**Assets**`: This is a term frequently used in `Webpack` to prevent conflations of
+- `Assets`: This is a term frequently used in `Webpack` to prevent conflations of
   concepts. It refers to `image files`, or even `data` or `script files`, collated by the
   `software` when producing a `bundled` application.
 
-- `**Bundle**`: This refers to the application that is output once `Webpack` has compiled
+- `Bundle`: This refers to the application that is output once `Webpack` has compiled
   an application. This is an optimized version of the original or source
   application—the reasons for this will be discussed in detail in later chapters. The
   bundler will combine these files into one file, which makes unpicking and
@@ -86,25 +86,25 @@ as well as some more unusual acronyms:
   to adopt conventions a lot more diligently. Should there be any insecure
   programming, these locations are more easily identified, isolated, and corrected.
 
-- `**SASS**`: A version of `CSS` that has enhanced features. `Webpack` handles this code
+- `SASS`: A version of `CSS` that has enhanced features. `Webpack` handles this code
   as it does `CSS`; however, it is a phrase that may come up and leave you stumped,
   so it is worth knowing about.
 
-- `**SCSS`**`: This is simply the name for the syntax version used to give `SASS` extra
+- `SCSS`: This is simply the name for the syntax version used to give `SASS` extra
   functionality. It is useful to know that `Webpack` is capable of `transpiling` both
   syntaxes.
 
-- `**Transpiling**`: This is the process where `Webpack` 5 takes a set of input source
+- `Transpiling`: This is the process where `Webpack` 5 takes a set of input source
   code and changes it into a more optimized output distribution code. This is done
   by removing `unused` or `duplicated` code. `Transpiling` is used to `convert` one set of
   files into a simpler set. For instance, `SCSS` often contains script that can be easily
   stored inside a `CSS` file. You might also transpile `SCSS` to `CSS`, or `TypeScript` to
   `JavaScript`.
-- **`TypeScript`**: For the uninitiated, `TypeScript` is a type of code that is similar to
+- `TypeScript`: For the uninitiated, `TypeScript` is a type of code that is similar to
   `JavaScript` in many ways. Browsers, for instance, most commonly run `JavaScript`,
   so it may be more appropriate to use `JavaScript`, where possible. `Webpack` 5 will
   transpile `TypeScript` into `JavaScript` whenever the former allows.
-- **`CDN`**: A `CDN` is a network of proxy servers that provides high availability and
+- `CDN`: A `CDN` is a network of proxy servers that provides high availability and
   high performance. Some examples are `Google APIs`, such as Google `Fonts`, and
   other similar tools that all `JavaScript` developers are, no doubt, familiar with.
 - **``Dependency` graph`s**: In `Webpack` 5, a ``dependency` graph`is a directed graph representing the`dependency`of several assets to each other.`Webpack`5 maps a list of assets and`dependencies` itself and records how they depend on each other
