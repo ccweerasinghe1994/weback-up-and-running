@@ -107,7 +107,7 @@ as well as some more unusual acronyms:
 - `CDN`: A `CDN` is a network of proxy servers that provides high availability and
   high performance. Some examples are `Google APIs`, such as Google `Fonts`, and
   other similar tools that all `JavaScript` developers are, no doubt, familiar with.
-- **``Dependency` graph`s**: In `Webpack` 5, a ``dependency` graph`is a directed graph representing the`dependency`of several assets to each other.`Webpack`5 maps a list of assets and`dependencies` itself and records how they depend on each other
+- `Dependency` graphs: In `Webpack` 5, a `dependency` graph`is a directed graph representing the`dependency`of several assets to each other.`Webpack`5 maps a list of assets and`dependencies` itself and records how they depend on each other
   in an application. It uses this to `derive` an `appropriate` output file `structure`.
 
 Though `JavaScript` is the entry point, `Webpack` appreciates that your other asset
