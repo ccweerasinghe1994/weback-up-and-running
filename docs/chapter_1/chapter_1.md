@@ -471,7 +471,7 @@ We will now go through each step for building our first project in detail:
     respectively:
 
 ```
-`webpack`5-demo
+`webpack 5-demo
 |- package.json
 |- /dist
 |- index.html
