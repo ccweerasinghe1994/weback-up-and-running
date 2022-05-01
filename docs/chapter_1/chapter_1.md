@@ -448,7 +448,7 @@ You can see how to make these alterations from the bold text in the preceding co
 that our entry point will be set as `index.js`. This is the first file that `Webpack` will read
 when beginning a bundle compilation (see the previous definition of a ``dependency` graph`).
 
-If you want to learn more about the `package.json` file, go to `https:/​/​docs.​npmjs.​com/ getting-​started/`, which gives you information about `npm`.
+If you want to learn more about the `package.json` file, go to [https:/​/​docs.​npmjs.​com/ getting-​started/]("https:/​/​docs.​npmjs.​com/ getting-​started/"), which gives you information about `npm`.
 
 We have now finished with the source code for the first demonstration application bundle.
 This constitutes the input or source files that we will now run through `Webpack` to produce
