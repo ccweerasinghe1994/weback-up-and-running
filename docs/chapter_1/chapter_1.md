@@ -126,14 +126,14 @@ development code.
 
 #### 1.1.2.1 Note
 
-Source code refers to the original application before it is bundled.
+Source code refers to the `original` application before it is bundled.
 Development code refers to the application after it is placed in the
-Node.js environment and bundled in developmental mode. A more
-"tightly packed" version of the bundle is produced in production mode,
-but this version is difficult to work on. Therefore, the development code
-can be altered to some degree after it is bundled, which is very useful, for
-example, in a case where you are altering a database's connection
-configurations.
+`Node.js` environment and `bundled` in` developmental mode`. A more
+`"tightly packed"` version of the bundle is produced in `production mode`,
+but this version is `difficult` to work on. Therefore, the development code
+can be `altered` to some degree after it is bundled, which is very useful, for
+example, in a case where you are altering a `database's connection
+configurations`.
 
 When working with `Webpack` 5, these phrases may present themselves and it is important
 that you don't get too confused by them.
