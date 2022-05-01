@@ -201,48 +201,48 @@ The advantages of `Webpack` 5 are summarized as follows:
   flexibility`, for bundling `large web applications` and for `single-page web
   applications`.
 
-`Webpack` is now considered an incredibly important tool for application development and
-web development, transforming the structure and optimizing the loading time for all of
-your web assets, such as HTML, JS, `CSS`, and `images`. Let's now get to grips with using
+`Webpack` is now considered an incredibly `important` tool for application development and
+`web development`, `transforming the structure` and `optimizing the loading time for all of
+your web assets`, such as `HTML`, `JS`, `CSS`, and `images`. Let's now get to grips with using
 `Webpack` practically. To do that, the first thing we will look at that may be new to you—if
 you have, perhaps, only worked with Vanilla `JavaScript` up to now—is modes.
 
 ### 1.1.5 Modes
 
 Once you have understood the general concepts, the first thing you need to learn about
-when running a build is modes. Modes are central to how `Webpack` works and compiles
+when running a `build` is `modes`. Modes are central to how `Webpack` works and compiles
 projects, so it is best to cover this brief but important topic before we go any further.
 
-Modes use the CLI, a process that we will cover in more detail later. If you are used to
+Modes use the `CLI`, a process that we will cover in more detail later. If you are used to
 using Vanilla `JavaScript`, this may be new to you. However, rest assured it is not a complex
 topic to get your head around.
 
-`Webpack` ships with two configuration files, which are as follows:
+`Webpack` ships with `two configuration` files, which are as follows:
 
-- Development config: This uses `webpack`-dev-server (hot reloading),
-  debugging enabled, and so on.
-- Production config: This will spit out an optimized, minimized (uglify JS), sourcemapped bundle that is used in production environments.
+- `Development config`: This uses `webpack-dev-server` `(hot reloading)`,
+  `debugging enabled`, and so on.
+- `Production config`: This will spit out an `optimized`, `minimized (uglify JS)`, `sourcemapped bundle` that is used in `production` environments.
 
-Since the release of version 5, `Webpack` takes care of the mode features by default by
-simply adding a mode argument to the command. `Webpack` can't use package.json alone
-to find the mode to determine the correct build path.
+Since the release of version 5, `Webpack` takes care of the `mode` features by `default` by
+simply adding a mode argument to the command. `Webpack` can't use `package.json` alone
+to find the mode to determine the `correct build path`.
 
-Now that we have a grasp of the fundamentals, it's time to progress to the practical setup.
+Now that we have a grasp of the fundamentals, it's time to progress to the    `practical setup`.
 
 ## 1.2 Setting up `Webpack`
 
 This book follows the development of a sample project step by step, and I am sure you will
 find this a simple way to learn how to use `Webpack` 5.
 
-`Webpack` 5 packages all its `dependencies` within the application you wish to bundle on a
-local machine. Theoretically, this can be done remotely, but to save any confusion for firsttime users, I will emphasize the use of a local machine.
+`Webpack` 5 packages all its `dependencies` within the `application` you wish to `bundle` on a
+`local machine`. Theoretically, this can be done remotely, but to save any `confusion` for firsttime users, I will emphasize the use of a `local machine`.
 
-Installing packages locally is recommended for most projects. It makes things easier when
-upgrade or break changes are introduced.
+Installing packages `locally` is recommended for most projects. It makes things easier when
+`upgrade` or `break changes` are introduced.
 
-We will begin with the npm installation. npm is the package manager that you will use with
-`Webpack` 5. Once this is installed on your local machine, you will be able to use the npm
-command using a CLI, such as Command Prompt.
+We will begin with the `npm installation`. npm is the `package manager` that you will use with
+`Webpack 5`. Once this is installed on your local machine, you will be able to use the `npm
+command using a CLI`, such as Command Prompt.
 
 Once you have installed npm, you can move on to the next step, which is to open your CLI.
 There are many to choose from, but for the sake of this tutorial, we will use Command
@@ -250,7 +250,7 @@ Prompt.
 
 Let's break this down step by step so that you can follow along:
 
-1. Install the npm package manager, which you will use with Wepback 5.
+1. Install the `npm package manager`, which you will use with Wepback 5.
 2. Open the CLI (in this tutorial, we will be using Command Prompt) and type the
    following:
 
@@ -275,9 +275,9 @@ Let's break this down step by step so that you can follow along:
 <!-- this is for command prompt -->
 
 ```bash
-mkdir `webpack`4 && cd `webpack`5
+mkdir webpack5 && cd webpack5
 npm init -y
-npm install `webpack` `webpack`-cli --save-dev
+npm install webpack webpack-cli --save-dev
 ```
 
 Let's break down the code block. The preceding command will first create a new
@@ -295,8 +295,8 @@ on the command line.
     version of your choice, such as 5.00:
 
 ```
-npm install --save-dev `webpack`
-npm install --save-dev `webpack`@<version>
+npm install --save-dev webpack
+npm install --save-dev webpack@<version>
 ```
 
 4.  The next command is npm install, which will install `Webpack` 5 in the
@@ -305,7 +305,7 @@ npm install --save-dev `webpack`@<version>
     environments (or modes):
 
 ```
-npm install --save-dev `webpack`-cli
+npm install --save-dev webpack-cli
 ```
 
 The following lines are a code snippet from the package.json file. We need
@@ -320,29 +320,29 @@ configuration information for your `Webpack` bundle.
 }
 ```
 
-When using `Webpack` 5, you can access its binary version by running npx
+When using `Webpack` 5, you can access its binary version by running `npx`
 `webpack` in the CLI.
-We should also decide which type of installation we need; any re-installation will
+We should also decide which type of installation we need; any `re-installation` will
 overwrite the previous one, so don't worry if you have already followed the
 preceding steps.
 
 6.  Let's do that installation now, if applicable.
     There are two types of installation:
 
-- Global: A global installation will lockdown your installation to a
-  specific version of `Webpack`.
+- Global: A `global` installation will `lockdown` your installation to a
+  `specific` version of `Webpack`.
   The following npm installation will make `Webpack` available
   globally:
 
 ```
-npm install --global `webpack`
+npm install --global webpack
 ```
 
 - Local: A local installation will allow you to run `Webpack` in the
   project directory. This needs to be done via the npm script:
 
 ```
-npm install `webpack` --save-dev
+npm install webpack --save-dev
 ```
 
 You will need to carry out all of the preceding steps every time you begin a new project on
@@ -371,7 +371,7 @@ ensure your project aligns with this tutorial, as follows:
 The project tree shows us the files that we will work on.
 
 2. Let's now take a closer look at the index files as they will be key to our frontend,
-   starting with src/index.js:
+   starting with `src/index.js`:
 
 ```js
 function component() {
@@ -387,7 +387,7 @@ document.body.appendChild(component());
 `index.js` contains our JS. The `index.html` file that follows is our user's
 frontend.
 
-3. It will also need setting up, so let's open and edit index.html:
+3. It will also need setting up, so let's open and edit `index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -405,15 +405,15 @@ frontend.
 Note the preceding ` <script src="https://unpkg.com/lodash@4.16.6">` tag. This
 refers to the use of the `lodash` library. The `index.js` file (not the `index.html` file)
 requires this library to be called. `Webpack` will take whatever modules it needs from the
-library and use them to build a ``dependency` graph` for the bundle.
+library and use them to build a `dependency graph` for the bundle.
 
 #### 1.3.1 Note
 
-Lodash is a `JavaScript` library that provides functional programming
+`Lodash` is a `JavaScript` library that provides functional programming
 tasks. It was released under the MIT license and essentially makes things
-easier when working with numbers, arrays, strings, and objects.
+easier when working with `numbers, arrays, strings, and objects`.
 
-Something to be aware of is that if it is not made clear that your code depends on
+Something to be aware of is that if it is `not` made clear that your code depends on
 an external library, the application will not function properly. For
 example, `dependencies` could be missing or included in the wrong
 order. Conversely, the browser will download unnecessary code if a `dependency`
@@ -421,7 +421,7 @@ is included but not used.
 
 We can manage these scripts by using `Webpack` 5.
 
-4.  You will also need to adjust your package.json file to mark your package as
+4.  You will also need to adjust your `package.json` file to mark your package as
     private, as well as removing the main entry point. This is to prevent accidentally
     publishing your code:
 
