@@ -456,18 +456,18 @@ our first bundled application.
 
 ### 1.3.2 Bundling your first project
 
-Web packing simply means bundling the project. It is the essence of `Webpack` and starting
+Web `packing` simply means `bundling` the project. It is the essence of `Webpack` and starting
 with this very simple introduction is an excellent way to begin learning about the
 application.
 
-Firstly, we need to separate the source code from our distribution code by altering our
-directory structure slightly. This source code is used to write and edit and the distribution
-code is the minimized and optimized bundle that is the result of our build process.
+Firstly, we need to `separate` the `source code` from our `distribution` code by altering our
+`directory structure slightly`. This `source code` is used to `write` and `edit` and the `distribution`
+code is the `minimized` and `optimized` bundle that is the `result` of our `build` `process`.
 
 We will now go through each step for building our first project in detail:
 
-1.  We will begin by structuring the project and the directories. First, note the /src
-    and /dist terms; they refer to the source code and distribution code,
+1.  We will begin by `structuring` the project and the `directories`. First, note the `/src`
+    and `/dist` terms; they refer to the `source code` and `distribution code`,
     respectively:
 
 ```
@@ -480,28 +480,28 @@ We will now go through each step for building our first project in detail:
 |- index.js
 ```
 
-2. To bundle the lodash `dependency` with index.js, we need to install the library
+2. To bundle the lodash `dependency` with `index.js`, we need to install the library
    locally:
 
 ```
 npm install --save lodash
 ```
 
-When installing a package that will be bundled to your production bundle, you
+When `installing` a `package` that will be `bundled` to your `production` `bundle`, you
 should use the following command:
 
 ```
 npm install --save
 ```
 
-If you're installing a package for development purposes (for example, a linter,
-testing libraries, and so on), you should use the following command:
+If you're installing a package for `development` `purposes` (for example, a linter,
+testing libraries, and so on), you should use the `following` `command`:
 
 ```
 npm install --save-dev
 ```
 
-3. Now, let's import lodash into our script using src/main.js:
+3. Now, let's import `lodash` into our script using `src/main.js`:
 
 ```js
 import_ from 'lodash';
@@ -515,8 +515,8 @@ return element;
 document.body.appendChild(component());
 ```
 
-4. Next, update your dist/index.html file. We will remove the inclusion of the
-   lodash library.
+4. Next, update your `dist/index.html` file. We will `remove` the inclusion of the
+   `lodash` `library`.
 
 This is done because we will be installing the library locally for bundling and no
 longer need to make a remote call to the library:
@@ -535,10 +535,10 @@ longer need to make a remote call to the library:
 </html>
 ```
 
-5. Next, we will use the command line to run `` npx `webpack````. The  ``npx`` command ships with Node 8.2/npm 5.0.0 or higher and runs the `Webpack` binary ``(./node_modules/.bin/`webpack`)`. This will take our script at `src/index.js`as the entry point and will generate`dist/main.js``` as the output:
+5. Next, we will use the command line to run `npx webpack`. The  `npx` command ships with `Node 8.2/npm 5.0.0` or higher and runs the `Webpack` binary `(./node_modules/.bin/webpack)`. This will take our script at `src/index.js`as the entry point and will generate`dist/main.js` as the `output`:
 
 ```
-npx `webpack`
+npx webpack
 ...
 Built at: 14/03/2019 11:50:07
 Asset Size Chunks Chunk Names
@@ -556,7 +556,7 @@ If there are no errors, the build can be considered successful.
 
 #### 1.3.2.1 Note
 
-Note that a warning is not considered an error. The warning is simply
+Note that a `warning` is `not` considered an `error`. The warning is simply
 shown because no mode has yet been set.
 
 I wouldn't be concerned about this as `Webpack` will default to production mode.
@@ -564,7 +564,7 @@ We will handle the setting of modes later in this guide.
 
 6. You should see the following text when you open index.html in your browser:
 
-`` Testing `Webpack`5 ``
+`` Testing Webpack 5 ``
 
 Huzzah—we have completed our first application bundle and I bet you're very proud of
 yourself! This was a fundamental step to begin with; we will move on to more complex
@@ -596,7 +596,7 @@ matter of this book:
 2. What is a bundle in `Webpack`?
 3. What is the latest version of `Webpack`, according to this guide?
 4. Which environment does `Webpack` work in?
-5. What is a ``dependency` graph`?
+5. What is a `dependency` graph`?
 6. When bundling, what entry is missing from the following command:
    npm --save lodash
 7. What is the name of the package manager that we use with `Webpack` 5?
